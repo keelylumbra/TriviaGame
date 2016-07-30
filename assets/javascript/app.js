@@ -45,13 +45,17 @@ wrong = 0
 
 
 
-		if ( trivia.answers.answers1[3].checked ) {
-             correct++;
-    } else  {
-      wrong++;
-    } 
+if ($('input:radio[name="q1"]') == 'back') {
+    
 
+        	 correct++;
+          
+        }
 
+        else  {
+      	wrong++;
+   	 }
+  
       
     
 
@@ -65,16 +69,25 @@ wrong = 0
         if (i < 4)
         {
             $('.qanda2').append($('<input type="radio" name="q2" value="' + i + '" checked>' + trivia.answers.answers2[i] + '</input>'));
-        };
+        }
 
     }
 
+    
 
-if ( trivia.answers.answers2[1].checked ) {
-             correct++;
-    } else  {
-      wrong++;
-    } 
+
+  if ($('input:radio[name="q2"]') == 'carbs') {
+
+        	 correct++;
+          
+        }
+
+
+        else  {
+      	wrong++;
+   	 }
+   
+
     
 
 
@@ -90,15 +103,21 @@ if ( trivia.answers.answers2[1].checked ) {
         {
             $('.qanda3').append($('<input type="radio" name="q3" value="' + i + '" checked>' + trivia.answers.answers3[i] + '</input>'));
         };
-
 }
 
-        if ( trivia.answers.answers3[0].checked ) {
-             correct++;
-    } else  {
-      wrong++;
-    } 
 
+if ($('input:radio[name="q3"]') == 'prostitute') {
+
+        	 correct++;
+          
+        }
+
+        else  {
+      	wrong++;
+   	 };
+
+
+       
     
 
 
@@ -112,16 +131,22 @@ if ( trivia.answers.answers2[1].checked ) {
         {
             $('.qanda4').append($('<input type="radio" name="q4" value="' + i + '" checked>' + trivia.answers.answers4[i] + '</input>'));
         };
-}
-
-if ( trivia.answers.answers4[1].checked ) {
-            correct++;
-    } else  {
-      wrong++;
-    } 
+    }
 
 
-       
+if ($('input:radio[name="q4"]') == 'virgin' ){
+
+        	 correct++;
+          
+        }
+
+        else  {
+      	wrong++;
+   	 }
+    
+
+
+ 
 
     
 setInterval();
@@ -131,12 +156,15 @@ setInterval();
 
 
 
-});
+})
+
+})
+
 
 
 	
 
-	});
+
 
 
 
@@ -163,7 +191,7 @@ setInterval();
 
 
     function clearOut (){
-	$(".qanda1").html("<br><Br><Br>Correct: " + correct + "<br><Br>Wrong: " + wrong);
+	$(".qanda1").html("<br><Br><Br>Correct: " + correct + "<br><Br>Wrong: " + wrong +"<br><Br><br><img src='http://imgfave-herokuapp-com.global.ssl.fastly.net/image_cache/1405459469450934_animate.gif'</img>");
     $(".qanda2").empty();
     $(".qanda3").empty();
     $(".qanda4").empty();
