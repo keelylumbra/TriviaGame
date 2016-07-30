@@ -41,19 +41,18 @@ wrong = 0
             $('.qanda1').append($('<input type="radio" name="q1" value="' + i + '" checked>' + trivia.answers.answers1[i] + '</input>'));
         };
 
+    }
 
 
-            $('.qanda1 input:radio').click(function() {
-    if ($(this).val() === trivia.answers.answers1[3]) {
-      correct++;
+
+		if ( trivia.answers.answers1[3].checked ) {
+             correct++;
     } else  {
       wrong++;
     } 
-  });
 
 
-    }
-
+      
     
 
 
@@ -68,15 +67,14 @@ wrong = 0
             $('.qanda2').append($('<input type="radio" name="q2" value="' + i + '" checked>' + trivia.answers.answers2[i] + '</input>'));
         };
 
+    }
 
-$('.qanda2 input type:radio').click(function() {
-    if ($(this).val() === trivia.answers.answers2[1]) {
-      correct++;
+
+if ( trivia.answers.answers2[1].checked ) {
+             correct++;
     } else  {
       wrong++;
     } 
-  });
-    }
     
 
 
@@ -93,16 +91,14 @@ $('.qanda2 input type:radio').click(function() {
             $('.qanda3').append($('<input type="radio" name="q3" value="' + i + '" checked>' + trivia.answers.answers3[i] + '</input>'));
         };
 
-        $('.qanda3 input type:radio').click(function() {
-    if ($(this).val() === trivia.answers.answers3[0]) {
-      correct++;
+}
+
+        if ( trivia.answers.answers3[0].checked ) {
+             correct++;
     } else  {
       wrong++;
     } 
-  });
 
-
-      }
     
 
 
@@ -116,17 +112,16 @@ $('.qanda2 input type:radio').click(function() {
         {
             $('.qanda4').append($('<input type="radio" name="q4" value="' + i + '" checked>' + trivia.answers.answers4[i] + '</input>'));
         };
+}
 
-
-$('.qanda4 input type:radio').click(function() {
-    if ($(this).val() === trivia.answers.answers4[1]) {
-      correct++;
+if ( trivia.answers.answers4[1].checked ) {
+            correct++;
     } else  {
       wrong++;
     } 
-  });
 
-       }
+
+       
 
     
 setInterval();
@@ -142,6 +137,11 @@ setInterval();
 	
 
 	});
+
+
+
+
+
 
 
 
