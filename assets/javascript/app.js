@@ -140,7 +140,7 @@ setInterval();
 
 //counter function
 
-    var counter = 10;
+    var counter = 30;
 	setInterval(function() {
     		counter--;
 
