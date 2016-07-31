@@ -24,10 +24,10 @@ wrong = 0
 
 
 
-
+ $( ".gif" ).hide('gif');
 //when start button clicked
 
-    $('.btn').click(function() {
+    $('.btn').click(function reset() {
 
 
         $( ".container" ).hide('container');
@@ -140,7 +140,7 @@ wrong = 0
 
   $('.btn').click(function(){
 
-    var counter = 30;
+    var counter = 5;
     setInterval(function() {
           
                 counter--;
@@ -173,15 +173,22 @@ if ($('input[name="q4"]:checked', '.qanda4').val() == 1) { correct++;
 }else { wrong++;
 }
 
+  $('.gif').on('click', function(){
+   window.location.href=window.location.href
+})
 
    function clearOut (){
-    $(".qanda1").html("<br><Br><Br>Correct: " + correct + "<br><Br>Wrong: " + wrong +"<br><Br><br><img src='http://imgfave-herokuapp-com.global.ssl.fastly.net/image_cache/1405459469450934_animate.gif'</img>");
+    $(".qanda1").html("<br><Br><Br>Correct: " + correct + "<br><Br>Wrong: " + wrong +"<br><Br><br>");
     $(".qanda2").empty();
     $(".qanda3").empty();
     $(".qanda4").empty();
+    $(".gif").show();
+    
 }
 
     clearOut ();
+
+  
             
 
         }
