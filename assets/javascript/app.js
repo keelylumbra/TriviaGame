@@ -22,12 +22,15 @@ var trivia =
 correct = 0
 wrong = 0
 
+
+
+
 //when start button clicked
 
 	$('.btn').click(function() {
 
 
-    	$( ".container" ).empty().removeClass('container');
+    	$( ".container" ).hide('container');
 
 //q1
 
@@ -38,25 +41,16 @@ wrong = 0
     	for (var i = 0; i < 4; i++) {
         if (i < 4)
         {
-            $('.qanda1').append($('<input type="radio" name="q1" value="' + i + '" checked>' + trivia.answers.answers1[i] + '</input>'));
+            $('.qanda1').append($('<input type="radio" name="q1" id="#q1" value="' + i + '" checked>' + trivia.answers.answers1[i] + '</input>'));
         };
 
     }
 
 
 
-if ($('input:radio[name="q1"]') == 'back') {
-    
 
-        	 correct++;
-          
-        }
 
-        else  {
-      	wrong++;
-   	 }
-  
-      
+   
     
 
 
@@ -76,17 +70,6 @@ if ($('input:radio[name="q1"]') == 'back') {
     
 
 
-  if ($('input:radio[name="q2"]') == 'carbs') {
-
-        	 correct++;
-          
-        }
-
-
-        else  {
-      	wrong++;
-   	 }
-   
 
     
 
@@ -106,15 +89,6 @@ if ($('input:radio[name="q1"]') == 'back') {
 }
 
 
-if ($('input:radio[name="q3"]') == 'prostitute') {
-
-        	 correct++;
-          
-        }
-
-        else  {
-      	wrong++;
-   	 };
 
 
        
@@ -134,16 +108,6 @@ if ($('input:radio[name="q3"]') == 'prostitute') {
     }
 
 
-if ($('input:radio[name="q4"]') == 'virgin' ){
-
-        	 correct++;
-          
-        }
-
-        else  {
-      	wrong++;
-   	 }
-    
 
 
  
@@ -176,7 +140,7 @@ setInterval();
 
 //counter function
 
-    var counter = 30;
+    var counter = 10;
 	setInterval(function() {
     		counter--;
 
@@ -189,19 +153,50 @@ setInterval();
 
     	if (counter === 0){
 
+    		
+
+   
+
+if ($('input[name="q1"]:checked', '.qanda1').val() == 3) { correct++;
+}else { wrong++;
+}
+
+if ($('input[name="q2"]:checked', '.qanda2').val() == 1) { correct++;
+}else { wrong++;
+}
+
+if ($('input[name="q3"]:checked', '.qanda3').val() == 0) { correct++;
+}else { wrong++;
+}
+
+if ($('input[name="q4"]:checked', '.qanda4').val() == 1) { correct++;
+}else { wrong++;
+}
+
+ 
+clearOut ();
 
     function clearOut (){
 	$(".qanda1").html("<br><Br><Br>Correct: " + correct + "<br><Br>Wrong: " + wrong +"<br><Br><br><img src='http://imgfave-herokuapp-com.global.ssl.fastly.net/image_cache/1405459469450934_animate.gif'</img>");
     $(".qanda2").empty();
     $(".qanda3").empty();
     $(".qanda4").empty();
-}
 
+    $(".button").show("container").html();
+
+
+
+}
 	clearOut ();
     		
 
     	}
 		}, 1000);
+
+
+
+	
+
 
 
 		
