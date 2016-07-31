@@ -140,7 +140,7 @@ wrong = 0
 
   $('.btn').click(function(){
 
-    var counter = 5;
+    var counter = 20;
     setInterval(function() {
           
                 counter--;
